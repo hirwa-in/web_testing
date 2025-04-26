@@ -26,9 +26,14 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Lint with flake8
+      run: |
+        flake8 . --exclude=venv --max-line-length=100
+
     - name: Run tests
       env:
         FLASK_KEY: test_secret_key
         DB_URI: sqlite:///test.db
       run: |
-        pytest tests/test.py 
+        pip install pytest
+        pytest tests/test.py
