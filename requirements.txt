@@ -10,3 +10,5 @@ flask_sqlalchemy==3.1.1
 SQLAlchemy==2.0.25
 gunicorn==21.2.0
 psycopg2-binary==2.9.9
+flake8==7.2.0
+pytest==8.3.5
