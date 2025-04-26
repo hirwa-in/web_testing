@@ -1,5 +1,6 @@
 from datetime import date
 import os
+from dotenv import load_dotenv
 from flask import Flask, abort, render_template, redirect, url_for, flash
 from flask_bootstrap import Bootstrap5
 from flask_ckeditor import CKEditor
@@ -13,7 +14,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.orm import relationship
 # Import your forms from the forms.py
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
-
+load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
@@ -263,4 +264,4 @@ def contact():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=False, port=5002)
