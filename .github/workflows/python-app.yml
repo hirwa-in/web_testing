@@ -31,4 +31,4 @@ jobs:
         FLASK_KEY: test_secret_key
         DB_URI: sqlite:///test.db
       run: |
-        pytest test/
+        pytest test/test.py
