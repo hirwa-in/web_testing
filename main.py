@@ -11,7 +11,6 @@ from sqlalchemy.orm import relationship, DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Text
 from functools import wraps
 from werkzeug.security import generate_password_hash, check_password_hash
-from sqlalchemy.orm import relationship
 
 # Import your forms from the forms.py
 from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
@@ -294,4 +293,3 @@ def contact():
 
 if __name__ == "__main__":
     app.run(debug=False, port=5002)
-

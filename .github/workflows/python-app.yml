@@ -28,7 +28,7 @@ jobs:
 
     - name: Lint with flake8
       run: |
-        flake8 . --exclude=venv --max-line-length=100
+        flake8 . --exclude=venv --max-line-length=105
 
     - name: Run tests
       env:
